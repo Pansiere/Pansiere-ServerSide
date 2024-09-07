@@ -11,5 +11,15 @@
 
 <body>
     <div class="header">
-        <h1>Bem-vindo à Minha Página PHP</h1>
+        <div class="meuGitHub">
+            <a href="https://github.com/seuperfil" target="_blank">GitHub</a>
+        </div>
+        <div class="banner">
+            <img src="assets/banner.jpg">
+        </div>
+        <nav>
+            <a href="#sobre">Sobre Mim</a> |
+            <a href="#projetos">Projetos</a> |
+            <a href="#contato">Contato</a>
+        </nav>
     </div>
