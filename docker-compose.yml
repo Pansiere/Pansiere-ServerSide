@@ -1,24 +1,8 @@
-###################################################
-#      Made by João Pedro Vicente Pansiere        #
-###################################################
+#######################################
+# Made by João Pedro Vicente Pansiere #
+#######################################
 version: "3.1"
 services:
-  mysql:
-    image: "mysql:8.0"
-    container_name: mysql
-    working_dir: /application
-    volumes:
-      - ".:/application"
-      - "./.mysql-data/db:/var/lib/mysql"
-    environment:
-      - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_DATABASE=DB
-    ports:
-      - "3306:3306"
-    networks:
-      environment_network:
-        ipv4_address: 172.30.0.2
-
   webserver:
     image: "nginx:alpine"
     container_name: nginx
@@ -30,7 +14,7 @@ services:
       - "80:80"
     networks:
       environment_network:
-        ipv4_address: 172.30.0.3
+        ipv4_address: 172.30.0.2
 
   php-fpm:
     build: phpdocker.io/php-fpm
@@ -41,20 +25,7 @@ services:
       - "./phpdocker.io/php-fpm/php-ini-overrides.ini:/etc/php/8.3/fpm/conf.d/99-overrides.ini"
     networks:
       environment_network:
-        ipv4_address: 172.30.0.4
-
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin:latest
-    container_name: phpmyadmin
-    environment:
-      - PMA_HOST=mysql
-      - PMA_USER=root
-      - PMA_PASSWORD=password
-    ports:
-      - "8080:80"
-    networks:
-      environment_network:
-        ipv4_address: 172.30.0.5
+        ipv4_address: 172.30.0.3
 
 networks:
   environment_network:
