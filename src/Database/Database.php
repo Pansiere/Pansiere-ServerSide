@@ -1,6 +1,6 @@
 <?php
 
-namespace Pansiere\Env\Database;
+namespace Pansiere\ServerSide\Database;
 
 use PDO;
 

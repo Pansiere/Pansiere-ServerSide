@@ -1,8 +1,8 @@
 <?php
 
-namespace Pansiere\Env\Controller;
+namespace Pansiere\ServerSide\Controller;
 
-use Pansiere\Env\Database\Database;
+use Pansiere\ServerSide\Database\Database;
 
 class Controller
 {
