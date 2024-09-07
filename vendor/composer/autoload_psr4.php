@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Pansiere\\Env\\' => array($baseDir . '/src'),
+    'Pansiere\\ServerSide\\' => array($baseDir . '/src'),
 );

@@ -1,19 +1,17 @@
 {
-  "name": "pansiere/env",
-  "type": "library",
-  "autoload": {
-    "psr-4": {
-      "Pansiere\\Env\\": "src/"
+    "name": "pansiere/server-side",
+    "description": "Blog about João Pedro Vicente Pansiere, it's me :)",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Pansiere\\ServerSide\\": "src/"
+        }
     },
-    "files": [
-      "src/helper.php"
-    ]
-  },
-  "authors": [
-    {
-      "name": "João Pedro V. Pansiere",
-      "email": "ojp027@gmail.com"
-    }
-  ],
-  "require": {}
+    "authors": [
+        {
+            "name": "João Pedro V. Pansiere",
+            "email": "ojp027@gmail.com"
+        }
+    ],
+    "require": {}
 }
