@@ -2,8 +2,16 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
+}
+
+header {
+  display: flex;
+}
+
+footer {
+  display: flex;
 }

@@ -18,4 +18,4 @@ switch ($page) {
         $controller->home();
 }
 
-dd($_SERVER['REQUEST_URI'], $page, $_SERVER);
+#dd($_SERVER['REQUEST_URI'], $page, $_SERVER);
