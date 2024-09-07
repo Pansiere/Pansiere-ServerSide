@@ -4,7 +4,7 @@ session_start();
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use Pansiere\Env\Controller\Controller;
+use Pansiere\ServerSide\Controller\Controller;
 
 $page = rtrim(strtok($_SERVER['REQUEST_URI'], '?'), '/') ?: '/';
 
