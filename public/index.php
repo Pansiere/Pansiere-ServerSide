@@ -14,12 +14,19 @@ switch ($page) {
     case '/admin':
         $controller->admin();
         break;
-    case '/projetos':
-        $controller->admin();
-        break;
+
     case '/sobre':
-        $controller->admin();
+        $controller->sobre();
         break;
+
+    case '/contato':
+        $controller->contato();
+        break;
+
+    case '/projetos':
+        $controller->projetos();
+        break;
+
     default:
         $controller->home();
 }

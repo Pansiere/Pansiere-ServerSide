@@ -17,16 +17,16 @@
     </div>
 
     <div class="content">
-        <div class="meuGitHub">
-            <a href="https://github.com/pansiere" target="_blank">GitHub</a>
-        </div>
-        <nav>
-            <a href="#sobre">Sobre Mim</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#contato">Contato</a>
+        <nav class="nav">
+            <a href="https://github.com/pansiere" target="_blank"><img src="assets/icons/github.png"></a>
+            <a href="/projetos">Projetos</a>
+            <a href="/sobre">Sobre Mim</a>
+            <a href="/contato">Contato</a>
         </nav>
+        <div class="gif">
+            <img src="assets/GIFs/code.gif">
+        </div>
     </div>
-    <?php dd($_SERVER['REQUEST_URI'], $_SERVER); ?>
 
     <div class="footer">
         <p>🎸 There's a lady who's sure all that glitters is gold, and she's buying a stairway to heaven 🎸</p>
