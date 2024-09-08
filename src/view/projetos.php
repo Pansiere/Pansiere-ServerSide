@@ -1,14 +1,3 @@
-<?php
-// dd($projetos);
-
-foreach ($projetos as $projeto) {
-    echo $projeto->getDescription();
-    echo "<br>";
-    echo $projeto->getName();
-    dd($projeto);
-}
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -36,8 +25,17 @@ foreach ($projetos as $projeto) {
             <a href="/contato">Contato</a>
         </nav>
         <div class="projetos">
-            <p>a</p>
+            <div class="buscador">
+                <input type="text" value="buscar projeto">
+            </div>
+            <?php foreach ($projetos as $projeto): ?>
+                <div class="projeto">
+                    <p><?= $projeto->getName(); ?></p>
+                    <p><?= $projeto->getDescription(); ?></p>
+                </div>
+            <?php endforeach; ?>
         </div>
+
     </div>
 
     <div class="footer">

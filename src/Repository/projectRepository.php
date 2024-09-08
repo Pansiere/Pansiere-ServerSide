@@ -34,9 +34,4 @@ class projectRepository
 
         return array_map([$this, 'createProjectObject'], $data);
     }
-
-    public function findProjectById($id)
-    {
-        $project = $this->pdo->query("");
-    }
 }
