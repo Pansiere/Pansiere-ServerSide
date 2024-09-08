@@ -30,5 +30,3 @@ switch ($page) {
     default:
         $controller->home();
 }
-
-dd($_SERVER);
