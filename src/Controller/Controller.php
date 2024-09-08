@@ -2,15 +2,15 @@
 
 namespace Pansiere\ServerSide\Controller;
 
-use Pansiere\ServerSide\Database\Database;
+use Pansiere\ServerSide\Repository\projectRepository;
 
 class Controller
 {
-    private $pdo;
+    private $projectReposotiry;
 
     public function __construct()
     {
-        $this->pdo = Database::createConnection();
+        $this->projectReposotiry = new projectRepository();
     }
 
     public function admin()
