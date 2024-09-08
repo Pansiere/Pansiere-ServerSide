@@ -23,7 +23,6 @@ class Controller
         require __DIR__ . "/../view/home.php";
     }
 
-
     public function contato()
     {
         require __DIR__ . "/../view/home.php";
