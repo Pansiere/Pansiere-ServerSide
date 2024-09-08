@@ -1,0 +1,44 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  background-image: url("/assets/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.header {
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+  color: rgb(14, 94, 126);
+  background-color: white;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 2%;
+
+  box-sizing: border-box;
+}
+
+.footer {
+  display: flex;
+  width: 100vw;
+  gap: 1vw;
+  color: rgb(14, 94, 126);
+  background-color: rgb(2, 16, 22);
+  justify-content: center;
+}
