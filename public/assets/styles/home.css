@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+  --cor-primaria: #0e5e7e;
+  --cor-secundaria: #021016;
+  --cor-terciaria: #45c5fc;
+
+  --font-principal: "Open Sans", sans-serif;
+  --font-style: italic;
+}
+
 body {
   height: 100vh;
   width: 100vw;
@@ -8,8 +19,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  background-image: url("/assets/images/background.jpg");
+  background-color: var(--cor-secundaria);
+  background-image: url("/assets/images/background.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -25,14 +36,21 @@ body {
   width: 100vw;
   justify-content: space-around;
   align-items: center;
-  color: rgb(14, 94, 126);
-  background-color: rgb(2, 16, 22);
+  color: var(--cor-primaria);
+  background-color: var(--cor-secundaria);
   margin: 0;
 }
 
 .header a {
   color: rgb(14, 94, 126);
   text-decoration: none;
+
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-family: var(--font-principal);
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: italic;
 }
 
 .content {
@@ -57,15 +75,22 @@ body {
 }
 
 .nav a {
-  color: rgb(14, 94, 126);
+  color: #0e5e7e;
   text-decoration: none;
+  font-family: var(--font-principal);
+  font-style: var(--font-style);
+  font-weight: 700;
   font-size: clamp(20px, 3vw, 35px);
-  font-weight: 800;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
   white-space: normal;
   text-align: center;
   padding: 10px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--cor-terciaria);
 }
 
 .nav a img {
@@ -100,7 +125,9 @@ body {
   display: flex;
   width: 100vw;
   gap: 1vw;
-  color: rgb(14, 94, 126);
-  background-color: rgb(2, 16, 22);
+  color: #0e5e7e;
+  background-color: #021016;
   justify-content: center;
+  font-family: var(--font-principal);
+  font-style: var(--font-style);
 }

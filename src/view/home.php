@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/styles/home.css" />
-    <title>Pansiere</title>
+    <link rel="preload" href="assets/images/background.webp" as="image">
+    <title>Pansiere's Server Side</title>
 </head>
 
 <body>
