@@ -26,10 +26,12 @@
             <a href="#contato">Contato</a>
         </nav>
     </div>
+    <?php dd($_SERVER['REQUEST_URI'], $_SERVER); ?>
 
     <div class="footer">
         <p>🎸 There's a lady who's sure all that glitters is gold, and she's buying a stairway to heaven 🎸</p>
     </div>
+
 </body>
 
 </html>
