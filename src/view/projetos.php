@@ -30,8 +30,8 @@
             </div>
             <?php foreach ($projetos as $projeto): ?>
                 <div class="projeto">
-                    <p><?= $projeto->getName(); ?></p>
-                    <p><?= $projeto->getDescription(); ?></p>
+                    <a href=""><?= $projeto->getName(); ?>: </a>
+                    <p class="description"><?= $projeto->getDescription(); ?></p>
                 </div>
             <?php endforeach; ?>
         </div>
