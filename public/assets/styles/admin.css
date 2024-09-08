@@ -25,6 +25,10 @@ body {
   background-color: white;
 }
 
+.header a {
+  text-decoration: none;
+}
+
 .content {
   display: flex;
   flex-direction: column;
