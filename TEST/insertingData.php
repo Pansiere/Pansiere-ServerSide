@@ -6,9 +6,8 @@ use Pansiere\ServerSide\Database\Database;
 
 $pdo = Database::createConnection();
 
-$projectName = 'Meu Projeto';
-$projectDescription = 'Este é um projeto de exemplo';
-$projectImages = ['image1.jpg', 'image2.jpg', 'image3.jpg'];
+$projectName = 'Servidor Proxmox';
+$projectDescription = 'Este é um projeto de exemplo GG gogo vamos lá!';
 
 try {
     $pdo->beginTransaction();
@@ -19,19 +18,26 @@ try {
         ':name' => $projectName,
         ':description' => $projectDescription
     ]);
+    $pdo->commit();
 
-    $projectId = $pdo->lastInsertId();
+    echo "Projeto e imagens inseridos com sucesso!";
+} catch (Exception $e) {
+    $pdo->rollBack();
+    echo "Erro ao inserir dados: " . $e->getMessage();
+}
 
-    $insertImageQuery = 'INSERT INTO project_images (project_id, image) VALUES (:project_id, :image)';
-    $stmt = $pdo->prepare($insertImageQuery);
+$projectName2 = 'Grafana';
+$projectDescription2 = 'Testato e aprovado vamos GG gogo';
 
-    foreach ($projectImages as $image) {
-        $stmt->execute([
-            ':project_id' => $projectId,
-            ':image' => $image
-        ]);
-    }
+try {
+    $pdo->beginTransaction();
 
+    $insertProjectQuery = 'INSERT INTO projects (name, description) VALUES (:name, :description)';
+    $stmt = $pdo->prepare($insertProjectQuery);
+    $stmt->execute([
+        ':name' => $projectName2,
+        ':description' => $projectDescription2
+    ]);
     $pdo->commit();
 
     echo "Projeto e imagens inseridos com sucesso!";

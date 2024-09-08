@@ -4,23 +4,18 @@ namespace Pansiere\ServerSide\Models;
 
 class Project
 {
-    private array $images;
-
     public function __construct(
         private string $name,
         private string $description,
-        private ?array $projectImages = []
-    ) {
-        $this->images = $projectImages;
+    ) {}
+
+    public function getName(): string
+    {
+        return $this->name;
     }
 
-    public function addImage(string $image): void
+    public function getDescription(): string
     {
-        $this->images[] = $image;
-    }
-
-    public function getImages(): array
-    {
-        return $this->images;
+        return $this->description;
     }
 }

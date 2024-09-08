@@ -1,3 +1,14 @@
+<?php
+// dd($projetos);
+
+foreach ($projetos as $projeto) {
+    echo $projeto->getDescription();
+    echo "<br>";
+    echo $projeto->getName();
+    dd($projeto);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 

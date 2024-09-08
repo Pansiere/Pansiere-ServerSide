@@ -30,6 +30,7 @@ class Controller
 
     public function projetos()
     {
+        $projetos = $this->projectReposotiry->findAll();
         require __DIR__ . "/../view/projetos.php";
     }
 

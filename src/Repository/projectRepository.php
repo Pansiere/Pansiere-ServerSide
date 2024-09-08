@@ -18,9 +18,21 @@ class projectRepository
         $this->pdo = Database::createConnection();
     }
 
-    public function create(Project $project): Project
+    private function createProjectObject(array $data): Project
     {
-        return $project;
+        return new Project(
+            $data['name'],
+            $data['description'],
+        );
+    }
+
+    public function findAll(): array
+    {
+        $sql = "SELECT * FROM projects";
+        $statement = $this->pdo->query($sql);
+        $data = $statement->fetchAll(\PDO::FETCH_ASSOC);
+
+        return array_map([$this, 'createProjectObject'], $data);
     }
 
     public function findProjectById($id)
