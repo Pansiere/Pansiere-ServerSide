@@ -30,7 +30,7 @@ class Controller
 
     public function projetos()
     {
-        require __DIR__ . "/../view/home.php";
+        require __DIR__ . "/../view/projetos.php";
     }
 
     public function home()
