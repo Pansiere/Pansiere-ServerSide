@@ -13,11 +13,6 @@ class Controller
         $this->projectReposotiry = new projectRepository();
     }
 
-    public function admin()
-    {
-        require __DIR__ . "/../view/home.php";
-    }
-
     public function sobre()
     {
         require __DIR__ . "/../view/home.php";

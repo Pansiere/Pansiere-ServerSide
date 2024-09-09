@@ -11,8 +11,8 @@ $page = rtrim(strtok($_SERVER['REQUEST_URI'], '?'), '/') ?: '/';
 $controller = new Controller();
 
 switch ($page) {
-    case '/admin':
-        $controller->admin();
+    case '/projetos':
+        $controller->projetos();
         break;
 
     case '/sobre':
@@ -21,10 +21,6 @@ switch ($page) {
 
     case '/contato':
         $controller->contato();
-        break;
-
-    case '/projetos':
-        $controller->projetos();
         break;
 
     default:
