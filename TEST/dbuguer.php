@@ -9,7 +9,7 @@ use Pansiere\ServerSide\Models\Project;
 function createProjectObject(array $data): Project
 {
     return new Project(
-        NULL,
+        (int)$data['id'],
         $data['name'],
         $data['description'],
     );
