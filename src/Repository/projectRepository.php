@@ -20,6 +20,7 @@ class projectRepository
     private function createProjectObject(array $data): Project
     {
         return new Project(
+            $data['id'],
             $data['name'],
             $data['description'],
         );
