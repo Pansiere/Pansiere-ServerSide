@@ -29,9 +29,9 @@
                 <input type="text" value="buscar projeto">
             </div>
             <?php foreach ($projetos as $projeto): ?>
-                <div class="projeto">
-                    <a href=""><?= $projeto->getName(); ?>: </a>
-                    <p class="description"><?= $projeto->getDescription(); ?></p>
+                <div href="a" class="projeto">
+                    <a href=""><?= $projeto->getName() ?>:&nbsp;</a>
+                    <p class="description">Descrição: <?= $projeto->getDescription(); ?></p>
                 </div>
             <?php endforeach; ?>
         </div>
