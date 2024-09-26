@@ -5,7 +5,7 @@ namespace Pansiere\ServerSide\Repository;
 use Pansiere\ServerSide\Database\Database;
 use Pansiere\ServerSide\Models\Project;
 
-class projectRepository
+class ProjectRepository
 {
     /** /aprendi isso aq na alura kkk :)
      * @param \PDO $pdo
